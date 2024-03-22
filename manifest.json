@@ -1,0 +1,42 @@
+{
+    "name": "Better SDO",
+    "description": "СДО, только лучше.",
+    "version": "0.1",
+    "manifest_version": 3,
+    "permissions": [
+        "storage"
+    ],
+    "host_permissions": [
+        "*://online-edu.mirea.ru/*"
+    ],
+    "action": {
+        "default_title": "Better SDO"
+    },
+    "background": {
+        "service_worker": "js/worker.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://online-edu.mirea.ru/*",
+                "https://online-edu.mirea.ru/*"
+            ],
+            "run_at": "document_start",
+            "js": [
+                "js/content.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "bettersdo.css"
+            ],
+            "matches": [
+                "http://online-edu.mirea.ru/*",
+                "https://online-edu.mirea.ru/*"
+            ],
+            "use_dynamic_url": true
+        }
+    ]
+}
