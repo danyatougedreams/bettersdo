@@ -1,0 +1,13 @@
+div#page,
+section:not(.card) {
+    background-color: $background-secondary !important;
+}
+
+div#page-wrapper {
+    margin: 0 !important;
+}
+
+div#page {
+    border-radius: $corners !important;
+    margin-top: 0 !important;
+}

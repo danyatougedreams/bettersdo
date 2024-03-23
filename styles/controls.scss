@@ -1,0 +1,162 @@
+.aabtn.focus,
+.aabtn:focus,
+.btn-link.focus,
+.btn-link:focus,
+.nav-link.focus,
+.nav-link:focus,
+.editor_atto_toolbar button.focus,
+.editor_atto_toolbar button:focus,
+[role="button"].focus,
+[role="button"]:focus,
+.list-group-item-action.focus,
+.list-group-item-action:focus,
+input[type="checkbox"].focus,
+input[type="checkbox"]:focus,
+input[type="radio"].focus,
+input[type="radio"]:focus,
+input[type="file"].focus,
+input[type="file"]:focus,
+input[type="image"].focus,
+input[type="image"]:focus,
+.sr-only-focusable.focus,
+.sr-only-focusable:focus,
+a.dropdown-toggle.focus,
+a.dropdown-toggle:focus,
+.modal-dialog[tabindex="0"].focus,
+.modal-dialog[tabindex="0"]:focus,
+.moodle-dialogue-base .closebutton.focus,
+.moodle-dialogue-base .closebutton:focus,
+button.close.focus,
+button.close:focus,
+.form-autocomplete-selection.focus,
+.form-autocomplete-selection:focus,
+[role="treeitem"]:not([aria-expanded="true"]).focus,
+[role="treeitem"]:not([aria-expanded="true"]):focus {
+    outline: 0;
+    -webkit-box-shadow: 0 0 0 0.1rem $primary !important;
+    box-shadow: 0 0 0 0.1rem $primary !important;
+    border-radius: $corners !important;
+}
+
+.icon {
+    margin: 0 !important;
+}
+
+a {
+    color: $primary !important;
+    text-decoration: none !important;
+
+    &:hover {
+        color: $primary-hover !important;
+        text-decoration: underline;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    margin-bottom: $margin-s !important;
+    font-weight: 600 !important;
+    line-height: 1.25 !important;
+}
+
+.dropdown-menu,
+.popover-region-container {
+    margin: 0 !important;
+    padding: 0 0 $margin-s 0 !important;
+    overflow-x: hidden !important;
+
+    background-color: $background-secondary !important;
+    border-width: 0 1px 1px 1px !important;
+    border-color: $border !important;
+    border-radius: 0 0 $corners $corners !important;
+    box-shadow: $shadow-drow-down !important;
+
+    .dropdown-item {
+        color: $foreground !important;
+        padding: $margin-s $margin-l !important;
+        font-size: $text-s !important;
+        font-weight: 500 !important;
+        color: $foreground;
+        display: flex !important;
+        align-items: center;
+        flex-direction: row;
+        gap: $margin-s + $margin-xs;
+
+        &:hover {
+            background-color: $button-hover !important;
+        }
+
+        &:focus,
+        &:active {
+            background-color: $background-secondary;
+            box-shadow: none !important;
+            -webkit-box-shadow: none !important;
+            color: $primary-hover !important;
+        }
+    }
+}
+
+.popover-region-toggle::after,
+.popover-region-toggle::before {
+    display: none !important;
+}
+
+.popover-region-container {
+    top: unset !important;
+    padding: 0 !important;
+    overflow-y: hidden;
+    display: flex !important;
+    flex-direction: column !important;
+    transition: none !important;
+    -webkit-transition: none !important;
+
+    > * {
+        padding: $margin-s $margin-m !important;
+    }
+
+    .popover-region-header-container {
+        height: auto !important;
+        line-height: unset !important;
+        display: flex !important;
+        align-items: center;
+
+        > h3 {
+            margin: 0 !important;
+            flex-grow: 1;
+            font-size: $text-s;
+            // text-transform: uppercase;
+        }
+    }
+
+    .popover-region-content-container {
+        .empty-message {
+            font-size: $text-s;
+            color: $foreground-secondary;
+            text-transform: uppercase;
+        }
+    }
+
+    .see-all-link {
+        padding: 0 !important;
+
+        > div {
+            padding: $margin-s $margin-m !important;
+            height: auto !important;
+            font-weight: 500 !important;
+
+            &:hover {
+                background-color: $button-hover !important;
+            }
+        }
+    }
+}

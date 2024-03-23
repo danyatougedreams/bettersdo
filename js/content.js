@@ -1,14 +1,23 @@
 (() => {
-    const link = document.createElement('link');
-    link.id = 'bettersdo_css';
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = chrome.runtime.getURL('bettersdo.css');
-    link.disabled = true;
-    (document.head || document.documentElement).appendChild(link);
+    const target = (document.head || document.documentElement);
+
+    // css
+    const css = document.createElement('link');
+    css.id = 'bettersdo_css';
+    css.rel = 'stylesheet';
+    css.type = 'text/css';
+    css.href = chrome.runtime.getURL('bettersdo.css');
+    css.disabled = true;
+    target.appendChild(css);
+
+    // // font ???
+    // const font = document.createElement('link');
+    // font.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap';
+    // font.rel = 'stylesheet';
+    // target.appendChild(font);
 
     chrome.storage.local.get(["sdoThemeIsEnabled"]).then((result) => {
-        link.disabled = !result.sdoThemeIsEnabled;
+        css.disabled = !result.sdoThemeIsEnabled;
     })
 
     chrome.runtime.onMessage.addListener(function (m, s) {
@@ -22,7 +31,7 @@
             }
 
             // инвертировано, тк уже записали в хранилище
-            link.disabled = result.sdoThemeIsEnabled;
+            css.disabled = result.sdoThemeIsEnabled;
         });
     });
 })();

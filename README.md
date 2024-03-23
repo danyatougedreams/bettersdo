@@ -3,5 +3,5 @@ choco install sass
 ```
 
 ```
-sass --watch styles/main.scss bettersdo.css
+sass --style compressed --watch styles/main.scss:bettersdo.css
 ```
