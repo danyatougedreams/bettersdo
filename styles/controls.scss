@@ -69,6 +69,25 @@ h6,
     line-height: 1.25 !important;
 }
 
+button.btn,
+button.btn-secondary {
+    font-weight: 500 !important;
+    color: $primary-foreground !important;
+    background-color: $primary !important;
+    border-width: 0px !important;
+    padding: $margin-s $margin-l !important;
+    font-size: $text-s !important;
+    line-height: 1.25 !important;
+    border-radius: $corners !important;
+    -webkit-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+
+    &:hover {
+        background-color: $primary-hover !important;
+    }
+}
+
 .dropdown-menu,
 .popover-region-container {
     margin: 0 !important;

@@ -62,8 +62,7 @@ jdiv .iconWrap_e804 {
 
 div#page-wrapper {
     > nav.navbar {
-        backdrop-filter: $blur !important;
-        background-color: rgba($background-secondary, $opacity-modifier) !important;
+        background-color: $background-secondary !important;
         display: flex !important;
         align-items: center;
         gap: $margin-l;
@@ -137,6 +136,10 @@ div#page-wrapper {
             }
         }
 
+        .coursecontrols:not(:has(a)) {
+            display: none !important;
+        }
+
         a.navbar-brand {
             display: flex;
             gap: $margin-s;
@@ -160,11 +163,6 @@ div#page-wrapper {
             display: none !important;
         }
         // }
-
-        // nobody uses that!
-        > div.coursecontrols {
-            // display: none !important;
-        }
 
         ul > li,
         ul > li > a,
@@ -371,10 +369,10 @@ div#page-wrapper {
         }
 
         li:not(:first-child) span.media-body {
-            text-wrap: nowrap !important;
-            text-overflow: ellipsis;
-            display: block !important;
-            overflow: hidden;
+            // text-wrap: nowrap !important;
+            // text-overflow: ellipsis;
+            // display: block !important;
+            // overflow: hidden;
         }
 
         li:first-child a[data-key="coursehome"] {
@@ -387,12 +385,6 @@ div#page-wrapper {
             padding: $margin-s $margin-m !important;
             border-radius: $corners !important;
 
-            div.media {
-                display: flex !important;
-                align-items: center;
-                gap: $margin-m;
-            }
-
             div.ml-1 {
                 margin: 0 !important;
             }
@@ -403,6 +395,8 @@ div#page-wrapper {
 
             span.media-left {
                 color: $foreground-secondary !important;
+                margin-right: $margin-m !important;
+                margin-top: $margin-xxs !important;
             }
 
             span {

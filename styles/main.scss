@@ -2,6 +2,7 @@
 @import "controls";
 @import "navigation";
 @import "page";
+@import "tweaks";
 
 /* scroll */
 *,
@@ -23,7 +24,7 @@ html *::-webkit-scrollbar-track {
 
 /* html, body */
 html {
-    background-color: $background-secondary !important;
+    background-color: $background !important;
 }
 
 body {

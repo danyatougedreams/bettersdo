@@ -10,7 +10,7 @@ $border: #d1d5db;
 $button-hover: #f9fafb;
 $button-hover-secondary: #eaebec;
 $primary-foreground: #ffffff;
-$primary: #3b82f6;
+$primary: #2563eb;
 $primary-hover: #1d4ed8;
 $destructive: #dc2626;
 
@@ -29,9 +29,6 @@ $shadow-drow-down:
     0 2px 3px 0 rgba(0, 0, 0, 0.1),
     0 1px 2px -1px rgba(0, 0, 0, 0.1);
 
-$blur: blur(10px);
-$opacity-modifier: 0.5;
-
 $margin-xxs: 0.15rem;
 $margin-xs: 0.25rem;
 $margin-s: 0.5rem;
@@ -44,6 +41,8 @@ $text-s: 0.9rem;
 $text-m: 1rem;
 $text-l: 1.1rem;
 $text-xl: 1.25rem;
+$text-xxl: 1.5rem;
+$text-xxxl: 2rem;
 
 $navigation-height: 3.5rem;
 $drawer-width: 16rem;

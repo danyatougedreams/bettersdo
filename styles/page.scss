@@ -1,6 +1,189 @@
-div#page,
-section:not(.card) {
-    background-color: $background-secondary !important;
+div#page {
+    background-color: transparent !important;
+
+    #page-header {
+        margin-bottom: $margin-m !important;
+
+        > div {
+            padding: 0 !important;
+        }
+    }
+
+    .card,
+    .fpwonderbox {
+        background-color: $background-secondary !important;
+        border-radius: $corners !important;
+        border-width: 0 !important;
+        box-shadow: $shadow !important;
+        padding: $margin-m $margin-l !important;
+
+        .card-body,
+        &.fpwonderbox {
+            padding: 0 !important;
+        }
+    }
+
+    #page-content {
+        background: $background !important;
+        padding: 0 !important;
+
+        #region-main-box {
+            background: inherit !important;
+            border-radius: $corners !important;
+            padding: inherit !important;
+
+            #region-main {
+                background: inherit !important;
+                padding: inherit !important;
+
+                .fpwonderbox {
+                    margin-bottom: $margin-m !important;
+
+                    * {
+                        padding: 0 !important;
+                        margin: 0 !important;
+                    }
+
+                    .iconset {
+                        display: flex !important;
+                        align-items: start;
+
+                        > div {
+                            background-color: $background-secondary !important;
+                            flex: 0 0 25%;
+                            border-color: $border !important;
+                            border-width: 1px 1px 1px 0 !important;
+                            transition: none !important;
+                            padding: $margin-s 0 !important;
+                            font-weight: 500 !important;
+                            font-size: $text-m !important;
+
+                            @media screen and (max-width: $adaptive-margin-min-width) {
+                                font-size: $text-xs !important;
+                            }
+
+                            &:first-child {
+                                border-radius: $corners 0 0 $corners !important;
+                                border-width: 1px !important;
+                            }
+
+                            &:last-child {
+                                border-radius: 0 $corners $corners 0 !important;
+                            }
+
+                            &:hover {
+                                background-color: $button-hover !important;
+                                a,
+                                i {
+                                    color: $foreground !important;
+                                }
+                            }
+
+                            &:active {
+                                a,
+                                i {
+                                    color: $primary-hover !important;
+                                }
+                            }
+
+                            a,
+                            i {
+                                color: $foreground-secondary !important;
+                            }
+
+                            > a:focus,
+                            > a:focus i {
+                                box-shadow: none !important;
+                                -webkit-box-shadow: none !important;
+                                color: $primary !important;
+                            }
+
+                            .fa-3x {
+                                font-size: $text-xxl !important;
+                                vertical-align: middle !important;
+                            }
+
+                            .navicon {
+                                margin-bottom: $margin-xs !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#page-footer {
+    background-color: $background !important;
+    padding: 0 !important;
+    margin-bottom: calc($margin-m * -2) !important;
+
+    .logininfo {
+        color: $foreground-secondary !important;
+    }
+
+    > .container {
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: unset !important;
+
+        @media (min-width: 768px) {
+            .col-md-8 {
+                flex: 0 0 60%;
+                max-width: 60%;
+            }
+        }
+        .row {
+            display: flex !important;
+            flex-direction: row !important;
+            gap: $margin-m !important;
+
+            > div {
+                padding: 0 !important;
+                line-height: 1.5 !important;
+
+                .brandbox {
+                    display: flex !important;
+                    flex-direction: column !important;
+                    gap: $margin-m !important;
+
+                    ul,
+                    div {
+                        margin: 0 !important;
+                        padding: 0 !important;
+                    }
+
+                    .footercontact {
+                        color: $foreground-secondary !important;
+
+                        i {
+                            width: 16px !important;
+                            display: inline-flex !important;
+                            align-items: center !important;
+                            flex-direction: column !important;
+                            margin-right: $margin-xs !important;
+                        }
+                    }
+
+                    .socials_wrapper {
+                        align-content: center;
+                    }
+
+                    a {
+                        margin-left: calc($margin-xxs * -1) !important;
+                    }
+                }
+            }
+        }
+
+        .nav > ul {
+            margin: $margin-m 0 !important;
+            padding: 0 !important;
+        }
+    }
 }
 
 div#page-wrapper {
