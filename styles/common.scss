@@ -31,11 +31,27 @@ button.close:focus,
 .form-autocomplete-selection.focus,
 .form-autocomplete-selection:focus,
 [role="treeitem"]:not([aria-expanded="true"]).focus,
-[role="treeitem"]:not([aria-expanded="true"]):focus,
-.btn:focus-visible {
+[role="treeitem"]:not([aria-expanded="true"]):focus {
     outline: 0;
     -webkit-box-shadow: 0 0 0 0.05rem $primary !important;
     box-shadow: 0 0 0 0.05rem $primary !important;
+}
+
+*,
+html * {
+    scrollbar-color: $border transparent;
+}
+
+*::-webkit-scrollbar-thumb,
+html *::-webkit-scrollbar-thumb {
+    background-color: $border;
+    border-radius: $corners;
+    border: 3px solid transparent;
+}
+
+*::-webkit-scrollbar-track,
+html *::-webkit-scrollbar-track {
+    background: transparent;
 }
 
 @supports not selector(:focus-visible) {
@@ -57,13 +73,22 @@ button.close:focus,
     }
 }
 
-a {
+a,
+a.aalink,
+a.coursename {
     color: $primary !important;
     text-decoration: none !important;
 
-    &:hover {
-        color: $primary-hover !important;
-        text-decoration: underline;
+    #page-content &:not(.dropdown-item):not(.fpwonderbox &) {
+        i {
+            color: $primary !important;
+        }
+
+        &:hover,
+        &:hover i {
+            color: $primary-hover !important;
+            text-decoration: underline !important;
+        }
     }
 }
 
@@ -91,7 +116,13 @@ div.my-3 {
     margin-top: $margin-s + $margin-xs !important;
 }
 
+button.btn,
+input.btn,
+a.btn,
 .btn,
+button.btn-secondary,
+input.bbtn-secondary,
+a.bbtn-secondary,
 .btn-secondary {
     font-weight: 500 !important;
     color: $primary-foreground !important;
@@ -109,18 +140,12 @@ div.my-3 {
         background-color: $primary-hover !important;
     }
 
-    &:active {
-        border-color: $primary-hover !important;
-        background-color: $primary-hover !important;
-        color: $primary-foreground !important;
-    }
-
     &.btn-outline-secondary,
     &.btn-icon {
         background-color: $background-secondary !important;
         color: $foreground-secondary !important;
 
-        &:hover {
+        &:hover:not(:active):not([aria-expanded="true"]:not(.nav-link)) {
             color: $foreground !important;
             background-color: $button-hover !important;
         }
@@ -141,6 +166,34 @@ div.my-3 {
         i {
             margin-right: $margin-s !important;
         }
+    }
+
+    &:active,
+    &[aria-expanded="true"]:not(.nav-link) {
+        border-color: $primary !important;
+        background-color: $primary !important;
+        color: $primary-foreground !important;
+
+        i {
+            color: $primary-foreground !important;
+        }
+
+        &:hover {
+            border-color: $primary-hover !important;
+            background-color: $primary-hover !important;
+        }
+    }
+
+    &:focus {
+        outline: 0;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+
+    &:focus-visible {
+        outline: 0;
+        -webkit-box-shadow: 0 0 0 0.05rem $primary !important;
+        box-shadow: 0 0 0 0.05rem $primary !important;
     }
 }
 

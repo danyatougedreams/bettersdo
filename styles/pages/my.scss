@@ -1,0 +1,202 @@
+div#page #region-main {
+    .fpwonderbox {
+        margin-bottom: $margin-m !important;
+        box-shadow: none !important;
+        border: 0px solid $border !important;
+
+        * {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        .iconset {
+            display: flex !important;
+            align-items: start;
+
+            > div.btn.btn-secondary {
+                background-color: transparent !important;
+                flex: 0 0 25%;
+                border-color: $border !important;
+                border-width: 1px 1px 1px 0 !important;
+                padding: 0 !important;
+                transition: none !important;
+                font-weight: 500 !important;
+                font-size: $text-m !important;
+                border-radius: 0 !important;
+
+                @media screen and (max-width: $adaptive-margin-min-width) {
+                    font-size: $text-xs !important;
+                }
+
+                &:first-child,
+                &:first-child a {
+                    border-radius: $corners * 1.5 0 0 $corners * 1.5 !important;
+                    border-width: 1px !important;
+                }
+
+                &:last-child,
+                &:last-child a {
+                    border-radius: 0 $corners * 1.5 $corners * 1.5 0 !important;
+                }
+
+                a {
+                    padding: $margin-s 0 !important;
+                    background-color: $background-secondary !important;
+                    display: block !important;
+                    // width: 100% !important;
+                    // height: 100% !important;
+
+                    &,
+                    i {
+                        color: $foreground-secondary !important;
+                    }
+
+                    &:hover,
+                    &:hover i {
+                        background-color: $button-hover !important;
+                        color: $foreground !important;
+                    }
+
+                    &:focus-visible,
+                    &:focus-visible i {
+                        box-shadow: none !important;
+                        -webkit-box-shadow: none !important;
+                        color: $primary !important;
+                    }
+
+                    &:active,
+                    &:active i {
+                        background-color: $primary-hover !important;
+                        color: $primary-foreground !important;
+                    }
+
+                    .fa-3x {
+                        font-size: $text-xxl !important;
+                        vertical-align: middle !important;
+                    }
+
+                    .navicon {
+                        margin-bottom: $margin-xs !important;
+                    }
+                }
+            }
+        }
+    }
+
+    div[data-region="filter"] > div {
+        margin: 0 $margin-s $margin-m 0 !important;
+    }
+
+    div[data-region="courses-view"] {
+        ul {
+            margin: 0 !important;
+            display: flex !important;
+            flex-direction: column;
+            gap: $margin-m;
+
+            > li {
+                padding: 0 !important;
+                border-width: 0 !important;
+
+                .row {
+                    gap: $margin-m;
+                    flex-wrap: nowrap !important;
+                    align-items: center;
+
+                    *:not(.progress-bar) {
+                        max-width: unset !important;
+                        width: unset !important;
+                        flex: unset !important;
+                    }
+
+                    > div {
+                        padding: 0 !important;
+                    }
+
+                    > div:first-child {
+                        flex: 1 0 !important;
+
+                        > div {
+                            display: flex !important;
+                            flex-direction: column-reverse;
+                            gap: $margin-xs;
+
+                            > div {
+                                font-size: $text-xs !important;
+                                color: $foreground-secondary !important;
+                            }
+
+                            > a {
+                                font-size: $text-m !important;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+
+                    > div:nth-child(2) {
+                        flex: 0.25 0 !important;
+                        .progress {
+                            // flex: 0 !important;
+                            margin-bottom: $margin-xs !important;
+                            border-radius: $corners !important;
+
+                            .progress-bar {
+                                background-color: $primary !important;
+                            }
+                        }
+
+                        .small {
+                            color: $foreground-secondary !important;
+                            font-size: $text-xxs !important;
+                            // text-transform: uppercase !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        div[data-region="paging-control-container"] > div > span {
+            margin-right: $margin-s !important;
+        }
+    }
+
+    section[data-block="news_items"] {
+        ul {
+            display: flex !important;
+            flex-direction: column;
+            gap: $margin-m;
+
+            > li {
+                display: flex !important;
+                flex-direction: column-reverse;
+                gap: $margin-xs;
+
+                > .info {
+                    font-size: $text-m !important;
+                    font-weight: 500;
+                }
+
+                > .head {
+                    display: flex !important;
+                    gap: $margin-xs;
+                    color: $foreground-secondary !important;
+                    font-size: $text-xs !important;
+
+                    .date::after {
+                        content: ",";
+                    }
+                }
+            }
+        }
+
+        .footer {
+            margin-top: $margin-m !important;
+
+            &,
+            * {
+                font-size: $text-m !important;
+                color: $primary !important;
+            }
+        }
+    }
+}
