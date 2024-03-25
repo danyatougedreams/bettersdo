@@ -141,21 +141,25 @@ div#page-wrapper {
         }
 
         a.navbar-brand {
-            display: flex;
+            display: flex !important;
             gap: $margin-s;
             align-items: center;
-        }
+            height: $navigation-height !important;
+            padding: 0 !important;
 
-        @media screen and (max-width: $adaptive-margin-s-width) {
             span.site-name {
-                display: none !important;
+                font-weight: 700;
+                font-size: $text-m;
+                color: $foreground;
             }
         }
 
-        span.site-name {
-            font-weight: 700;
-            font-size: $text-m;
-            color: $foreground;
+        @media screen and (max-width: $adaptive-margin-s-width) {
+            span.site-name,
+            a.navbar-brand:not(:has(.logo)) {
+                display: none !important;
+                visibility: collapse !important;
+            }
         }
 
         // @media screen and (max-width: 1000px) {
@@ -183,7 +187,7 @@ div#page-wrapper {
                 border-radius: $corners !important;
 
                 > a {
-                    font-size: $text-s;
+                    font-size: $text-m;
                     color: $foreground-secondary !important;
                     font-weight: 500;
 
@@ -291,6 +295,13 @@ div#page-wrapper {
                 }
             }
         }
+
+        .dropdown-menu,
+        .popover-region-container {
+            border-width: 0 1px 1px 1px !important;
+            border-radius: 0 0 $corners $corners !important;
+            padding: 0 0 $margin-xs 0 !important;
+        }
     }
 
     > div#nav-drawer {
@@ -396,11 +407,11 @@ div#page-wrapper {
             span.media-left {
                 color: $foreground-secondary !important;
                 margin-right: $margin-m !important;
-                margin-top: $margin-xxs !important;
+                // margin-top: $margin-xxs !important;
             }
 
             span {
-                font-size: $text-s !important;
+                font-size: $text-m !important;
                 font-weight: 500 !important;
             }
 

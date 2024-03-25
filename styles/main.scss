@@ -1,5 +1,5 @@
 @import "variables";
-@import "controls";
+@import "common";
 @import "navigation";
 @import "page";
 @import "tweaks";
@@ -42,7 +42,7 @@ body {
     min-height: calc(100vh - $navigation-height) !important;
 
     &.drawer-open-left {
-        padding-left: $drawer-width + $margin-m + $adaptive-margin-max !important;
+        padding-left: $drawer-width + $margin-s + $adaptive-margin-max !important;
     }
 
     &.drawer-ease {
@@ -59,7 +59,7 @@ body {
         }
 
         &.drawer-open-left {
-            padding-left: $drawer-width + $margin-m + $adaptive-margin-l !important;
+            padding-left: $drawer-width + $margin-s + $adaptive-margin-l !important;
         }
     }
 
@@ -70,7 +70,7 @@ body {
         }
 
         &.drawer-open-left {
-            padding-left: $drawer-width + $margin-m + $adaptive-margin-m !important;
+            padding-left: $drawer-width + $margin-s + $adaptive-margin-m !important;
         }
     }
 
@@ -81,7 +81,7 @@ body {
         }
 
         &.drawer-open-left {
-            padding-left: $drawer-width + $margin-m + $adaptive-margin-s !important;
+            padding-left: $drawer-width + $margin-s + $adaptive-margin-s !important;
         }
     }
 
@@ -96,9 +96,12 @@ body {
         }
     }
 
+    // alert
     > div:not(#page-wrapper) {
         margin: 0 !important;
-        border-radius: $corners !important;
-        box-shadow: $shadow !important;
+        border: 1px solid $border !important;
+        border-radius: $corners * 1.5 !important;
+        // box-shadow: $shadow !important;
+        font-weight: 500 !important;
     }
 }

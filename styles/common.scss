@@ -31,15 +31,30 @@ button.close:focus,
 .form-autocomplete-selection.focus,
 .form-autocomplete-selection:focus,
 [role="treeitem"]:not([aria-expanded="true"]).focus,
-[role="treeitem"]:not([aria-expanded="true"]):focus {
+[role="treeitem"]:not([aria-expanded="true"]):focus,
+.btn:focus-visible {
     outline: 0;
-    -webkit-box-shadow: 0 0 0 0.1rem $primary !important;
-    box-shadow: 0 0 0 0.1rem $primary !important;
-    border-radius: $corners !important;
+    -webkit-box-shadow: 0 0 0 0.05rem $primary !important;
+    box-shadow: 0 0 0 0.05rem $primary !important;
+}
+
+@supports not selector(:focus-visible) {
+    .btn:focus {
+        outline: 0;
+        -webkit-box-shadow: 0 0 0 0.05rem $primary !important;
+        box-shadow: 0 0 0 0.05rem $primary !important;
+    }
 }
 
 .icon {
     margin: 0 !important;
+    font-size: $text-m !important;
+    width: $text-m !important;
+    height: $text-m !important;
+
+    &::before {
+        vertical-align: middle !important;
+    }
 }
 
 a {
@@ -57,25 +72,32 @@ h2,
 h3,
 h4,
 h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
+h6 {
     margin-bottom: $margin-s !important;
     font-weight: 600 !important;
     line-height: 1.25 !important;
 }
 
-button.btn,
-button.btn-secondary {
+h1 {
+    font-size: $text-xxl !important;
+}
+
+h5 {
+    font-size: $text-l;
+}
+
+div.mt-3,
+div.my-3 {
+    margin-top: $margin-s + $margin-xs !important;
+}
+
+.btn,
+.btn-secondary {
     font-weight: 500 !important;
     color: $primary-foreground !important;
     background-color: $primary !important;
     border-width: 0px !important;
-    padding: $margin-s $margin-l !important;
+    padding: $margin-s $margin-m !important;
     font-size: $text-s !important;
     line-height: 1.25 !important;
     border-radius: $corners !important;
@@ -86,23 +108,61 @@ button.btn-secondary {
     &:hover {
         background-color: $primary-hover !important;
     }
+
+    &:active {
+        border-color: $primary-hover !important;
+        background-color: $primary-hover !important;
+        color: $primary-foreground !important;
+    }
+
+    &.btn-outline-secondary,
+    &.btn-icon {
+        background-color: $background-secondary !important;
+        color: $foreground-secondary !important;
+
+        &:hover {
+            color: $foreground !important;
+            background-color: $button-hover !important;
+        }
+    }
+
+    &.btn-outline-secondary {
+        border: 1px solid $border !important;
+    }
+
+    &.btn-icon {
+        padding: $margin-s !important;
+        height: auto !important;
+        width: auto !important;
+        aspect-ratio: 1/1 !important;
+    }
+
+    &:has(.d-sm-inline-block) {
+        i {
+            margin-right: $margin-s !important;
+        }
+    }
 }
 
 .dropdown-menu,
 .popover-region-container {
     margin: 0 !important;
-    padding: 0 0 $margin-s 0 !important;
+    padding: $margin-xs 0 !important;
     overflow-x: hidden !important;
 
     background-color: $background-secondary !important;
-    border-width: 0 1px 1px 1px !important;
     border-color: $border !important;
-    border-radius: 0 0 $corners $corners !important;
+    border-radius: $corners !important;
+    border-width: 1px !important;
     box-shadow: $shadow-drow-down !important;
+
+    .dropdown-divider {
+        margin: $margin-xs 0 !important;
+    }
 
     .dropdown-item {
         color: $foreground !important;
-        padding: $margin-s $margin-l !important;
+        padding: $margin-s $margin-m !important;
         font-size: $text-s !important;
         font-weight: 500 !important;
         color: $foreground;
@@ -115,12 +175,24 @@ button.btn-secondary {
             background-color: $button-hover !important;
         }
 
-        &:focus,
         &:active {
-            background-color: $background-secondary;
+            background-color: $primary-hover !important;
+            color: $primary-foreground !important;
             box-shadow: none !important;
             -webkit-box-shadow: none !important;
-            color: $primary-hover !important;
+        }
+
+        &[aria-current="true"] {
+            background-color: $primary !important;
+            color: $primary-foreground !important;
+
+            &::before {
+                display: none !important;
+            }
+
+            &:hover {
+                background-color: $primary-hover !important;
+            }
         }
     }
 }
@@ -177,5 +249,21 @@ button.btn-secondary {
                 background-color: $button-hover !important;
             }
         }
+    }
+}
+
+.card,
+.fpwonderbox,
+#page-footer,
+.course-content {
+    background-color: $background-secondary !important;
+    border-radius: $corners * 1.5 !important;
+    border: 1px solid $border !important;
+    // box-shadow: $shadow !important;
+    padding: $margin-m $margin-m + $margin-xs !important;
+
+    .card-body,
+    &.fpwonderbox {
+        padding: 0 !important;
     }
 }
