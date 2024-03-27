@@ -55,8 +55,8 @@ html *::-webkit-scrollbar-track {
 }
 
 @supports not selector(:focus-visible) {
-    .btn:focus {
-        outline: 0;
+    *:focus {
+        outline: 1 !important;
         -webkit-box-shadow: 0 0 0 0.05rem $primary !important;
         box-shadow: 0 0 0 0.05rem $primary !important;
     }
@@ -67,10 +67,6 @@ html *::-webkit-scrollbar-track {
     font-size: $text-m !important;
     width: $text-m !important;
     height: $text-m !important;
-
-    &::before {
-        vertical-align: middle !important;
-    }
 }
 
 a,
@@ -92,6 +88,14 @@ a.coursename {
     }
 }
 
+a,
+a * {
+    transition:
+        color 0.1s ease 0s,
+        background-color 0.1s ease 0s,
+        border-color 0.1s ease 0s !important;
+}
+
 h1,
 h2,
 h3,
@@ -107,8 +111,14 @@ h1 {
     font-size: $text-xxl !important;
 }
 
-h5 {
-    font-size: $text-l;
+// card headings?
+h5,
+h3 {
+    font-size: $text-xl !important;
+}
+
+h4 {
+    font-size: $text-l !important;
 }
 
 div.mt-3,
@@ -134,7 +144,10 @@ a.bbtn-secondary,
     border-radius: $corners !important;
     -webkit-transition: none !important;
     -o-transition: none !important;
-    transition: none !important;
+    transition:
+        color 0.1s ease 0s,
+        background-color 0.1s ease 0s,
+        border-color 0.1s ease 0s !important;
 
     &:hover {
         background-color: $primary-hover !important;
@@ -194,6 +207,27 @@ a.bbtn-secondary,
         outline: 0;
         -webkit-box-shadow: 0 0 0 0.05rem $primary !important;
         box-shadow: 0 0 0 0.05rem $primary !important;
+    }
+
+    i {
+        transition: color 0.1s ease 0s !important;
+    }
+
+    &.btn-outline-success {
+        background-color: $background-secondary !important;
+        color: $success !important;
+        border: 1px solid $success !important;
+
+        &:hover {
+            color: $success-hover !important;
+            border: 1px solid $success-hover !important;
+            background-color: $button-hover !important;
+        }
+
+        &:active {
+            color: $primary-foreground !important;
+            background-color: $success-hover !important;
+        }
     }
 }
 
@@ -308,7 +342,9 @@ a.bbtn-secondary,
 .card,
 .fpwonderbox,
 #page-footer,
-.course-content {
+// #page ul.topics > li,
+#page .course-content,
+div[role="main"]:not(:has(.card, .course-content)) {
     background-color: $background-secondary !important;
     border-radius: $corners * 1.5 !important;
     border: 1px solid $border !important;
@@ -319,4 +355,19 @@ a.bbtn-secondary,
     &.fpwonderbox {
         padding: 0 !important;
     }
+}
+
+p,
+caption {
+    margin-top: 0 !important;
+    padding: 0 !important;
+    margin-bottom: $margin-s !important;
+
+    &:last-child {
+        margin-bottom: 0 !important;
+    }
+}
+
+table {
+    border-color: $border !important;
 }

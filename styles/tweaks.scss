@@ -3,3 +3,13 @@ div#page div#learningcontent:has(#page-header div.d-flex > div.singlebutton:only
     display: flex !important;
     flex-direction: column-reverse !important;
 }
+
+// hide empty course elements
+div#page .course-content ul.topics > li:has(.content > ul:empty) {
+    display: none !important;
+}
+
+// hide hidden course elements
+div#page .course-content ul.topics > li:has(.content .section_availability .ishidden) {
+    display: none !important;
+}

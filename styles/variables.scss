@@ -13,6 +13,9 @@ $primary-foreground: #ffffff;
 $primary: #2563eb;
 $primary-hover: #1d4ed8;
 $destructive: #dc2626;
+$success: #5cb85c;
+$success-hover: #408a40;
+$footer-background: #1d1c21;
 
 $corners: 0.375rem;
 
@@ -29,6 +32,7 @@ $shadow-drow-down:
     0 2px 3px 0 rgba(0, 0, 0, 0.1),
     0 1px 2px -1px rgba(0, 0, 0, 0.1);
 
+$margin-xxxs: 0.105rem;
 $margin-xxs: 0.15rem;
 $margin-xs: 0.25rem;
 $margin-s: 0.5rem;
@@ -40,8 +44,8 @@ $text-xxs: 0.7rem;
 $text-xs: 0.775rem;
 $text-s: 0.85rem;
 $text-m: 0.925rem;
-$text-l: 1.1rem;
-$text-xl: 1.25rem;
+$text-l: 1rem;
+$text-xl: 1.15rem;
 $text-xxl: 1.4rem;
 $text-xxxl: 2rem;
 
@@ -58,5 +62,8 @@ $adaptive-margin-l-width: 1600px;
 $adaptive-margin-m-width: 1400px;
 $adaptive-margin-s-width: 1250px;
 $adaptive-margin-min-width: 950px;
+
+$header-pic: 3.5rem;
+$file-icon-bg: 1.5rem;
 
 // h2: font-weight 700; font-size: 1.875rem; line-height: 2.25rem; margin-top: 1.5rem;

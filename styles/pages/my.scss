@@ -43,6 +43,11 @@ div#page #region-main {
                     padding: $margin-s 0 !important;
                     background-color: $background-secondary !important;
                     display: block !important;
+                    transition:
+                        color 0.1s ease 0s,
+                        background-color 0.1s ease 0s,
+                        border-color 0.1s ease 0s !important;
+
                     // width: 100% !important;
                     // height: 100% !important;
 
@@ -51,10 +56,13 @@ div#page #region-main {
                         color: $foreground-secondary !important;
                     }
 
-                    &:hover,
-                    &:hover i {
+                    &:hover {
                         background-color: $button-hover !important;
                         color: $foreground !important;
+
+                        i {
+                            color: $foreground !important;
+                        }
                     }
 
                     &:focus-visible,
@@ -64,10 +72,13 @@ div#page #region-main {
                         color: $primary !important;
                     }
 
-                    &:active,
-                    &:active i {
+                    &:active {
                         background-color: $primary-hover !important;
                         color: $primary-foreground !important;
+
+                        i {
+                            color: $primary-foreground !important;
+                        }
                     }
 
                     .fa-3x {

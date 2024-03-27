@@ -1,0 +1,257 @@
+#page {
+    .course-content ul.topics {
+        // to use a divider
+        margin: calc($margin-m * -1) calc(($margin-m + $margin-xs) * -1) !important;
+
+        p:empty {
+            display: none !important;
+        }
+
+        > li:not(:first-child) {
+            border: 1px solid $border !important;
+            border-width: 1px 0px 0px 0px !important;
+        }
+
+        > li {
+            margin: 0 !important;
+            padding: $margin-m $margin-m + $margin-xs !important;
+
+            .sectionname {
+                margin: 0 0 $margin-s + $margin-xs 0 !important;
+                padding: 0 !important;
+                background-color: $background-secondary !important;
+                border-width: 0 !important;
+            }
+
+            .content {
+                background-color: $background-secondary !important;
+            }
+
+            .content:has(.section_availability .isrestricted, .section_availability .ishidden) .sectionname {
+                color: $foreground-secondary;
+            }
+
+            div:empty {
+                display: none !important;
+            }
+
+            .summary {
+                margin: 0 0 $margin-m 0 !important;
+
+                h4 {
+                    margin: 0 !important;
+                }
+            }
+
+            ul.section {
+                margin: 0 !important;
+                padding: 0 !important;
+                display: flex !important;
+                flex-direction: column;
+                gap: $margin-m;
+
+                > li {
+                    padding: 0 !important;
+                    border: unset !important;
+
+                    &:hover {
+                        background-color: unset !important;
+                    }
+
+                    &.activity .mod-indent + div {
+                        display: flex !important;
+                        flex-direction: column !important;
+
+                        .contentwithoutlink,
+                        .contentafterlink {
+                            padding: 0 !important;
+                            font-size: $text-s !important;
+
+                            > * {
+                                margin: 0 !important;
+                            }
+
+                            p {
+                                margin: 0 0 $margin-s 0 !important;
+                            }
+                        }
+
+                        .contentwithoutlink {
+                            margin: 0 !important;
+                        }
+
+                        .contentafterlink,
+                        .contentwithoutlink.dimmed {
+                            margin: 0 0 0 $file-icon-bg + $margin-s + $margin-xs !important;
+                        }
+
+                        &:has(.activityinstance) {
+                            &:has(.availabilityinfo, .activity-information) {
+                                .contentwithoutlink,
+                                .contentafterlink {
+                                    margin-top: $margin-s !important;
+                                }
+                            }
+                        }
+
+                        .activityinstance {
+                            padding: 0 !important;
+                            height: unset !important;
+                            min-height: unset !important;
+                            min-width: unset !important;
+
+                            > * {
+                                display: flex !important;
+                                align-items: start !important;
+                                text-indent: 0 !important;
+                                padding: 0 !important;
+                                margin: 0 !important;
+
+                                span {
+                                    margin-top: $margin-xxxs !important;
+                                    margin-bottom: $margin-xs !important;
+                                    font-weight: 500;
+                                    font-size: $text-m;
+                                }
+
+                                img {
+                                    margin-right: $margin-s + $margin-xs !important;
+                                    width: $file-icon-bg !important;
+                                    height: $file-icon-bg !important;
+                                }
+                            }
+                        }
+
+                        &:has(.activityinstance) .activity-information,
+                        &:has(.activityinstance) .availabilityinfo {
+                            margin: 0 0 0 $file-icon-bg + $margin-s + $margin-xs !important;
+
+                            * {
+                                margin-top: 0 !important;
+                            }
+                        }
+
+                        .activity-information > div,
+                        .activity-information > div > div {
+                            font-size: unset !important;
+                        }
+                    }
+
+                    > div,
+                    .mod-indent-outer {
+                        padding: 0 !important;
+                        margin: 0 !important;
+                    }
+                }
+            }
+
+            button,
+            .badge {
+                padding: $margin-xxs $margin-s !important;
+                font-size: $text-xxs !important;
+                flex: 0.25 0 !important;
+                text-wrap: nowrap !important;
+                margin: 0 !important;
+                border-radius: $corners !important;
+                line-height: unset !important;
+                font-weight: 600 !important;
+                margin-right: $margin-xxs !important;
+            }
+
+            .dimmed_text {
+                color: $foreground-secondary !important;
+            }
+
+            .isrestricted .badge,
+            .ishidden .badge {
+                color: $primary-foreground;
+                background-color: $foreground-secondary;
+            }
+
+            .availabilityinfo {
+                font-size: $text-xs !important;
+                font-weight: 500 !important;
+                color: $foreground-secondary !important;
+            }
+        }
+    }
+
+    .block_course_contents {
+        .card-text {
+            margin-top: $margin-s !important;
+        }
+
+        ul.section-list {
+            margin: 0 !important;
+            font-size: $text-m !important;
+            font-weight: 500;
+
+            li {
+                border-width: 0 !important;
+                padding: 0 !important;
+                align-content: center;
+
+                &:not(:last-child) {
+                    margin-bottom: $margin-s !important;
+                }
+
+                a {
+                    margin: 0 !important;
+                }
+
+                .section-number {
+                    background-color: $primary !important;
+                    color: $primary-foreground !important;
+                    width: 1.05rem !important;
+                    height: 1.05rem !important;
+                    border-radius: 50% !important;
+                    margin-right: $margin-xs !important;
+                    font-weight: 600;
+                }
+
+                .section-title {
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+
+    .block_people {
+        h3 {
+            font-size: $text-m !important;
+            margin-bottom: $margin-s + $margin-xs !important;
+        }
+
+        .card-text {
+            margin-top: $margin-xs !important;
+        }
+
+        ul {
+            margin: 0 !important;
+
+            li {
+                &:not(:last-child) {
+                    margin-bottom: $margin-m !important;
+                }
+
+                .icons:empty {
+                    display: none !important;
+                }
+
+                .details {
+                    line-height: 1.25 !important;
+                }
+            }
+        }
+
+        .participants {
+            h3 {
+                margin-bottom: $margin-xs !important;
+            }
+
+            i {
+                margin-right: $margin-s !important;
+            }
+        }
+    }
+}

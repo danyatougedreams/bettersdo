@@ -7,7 +7,7 @@ body {
     font-size: $text-m !important;
     font-weight: 400 !important;
     color: $foreground !important;
-    line-height: 1.25 !important;
+    // line-height: 1.25 !important;
     background-color: $background !important;
     padding: $margin-m $adaptive-margin-max $margin-m $adaptive-margin-max !important;
     margin: $navigation-height 0 0 0 !important;
@@ -80,10 +80,15 @@ body {
         // box-shadow: $shadow !important;
         font-weight: 500 !important;
     }
+
+    > div:empty {
+        display: none !important;
+    }
 }
 
 div#page-wrapper {
     margin: 0 !important;
+    min-height: calc(100vh - ($navigation-height + $margin-m * 3)) !important;
 }
 
 div#page {
@@ -104,14 +109,45 @@ div#page {
 
         a:hover,
         #page-navbar li a:hover {
-            color: $primary-hover !important;
+            color: $foreground !important;
+        }
+
+        .page-context-header {
+            padding: 0 !important;
+            display: flex !important;
+            align-items: center;
+
+            .page-header-image {
+                margin: 0 $margin-m 0 0 !important;
+
+                img {
+                    margin: 0 !important;
+                    width: $header-pic !important;
+                    height: $header-pic !important;
+                }
+            }
+
+            .page-header-headings,
+            .page-header-headings h1 {
+                margin: 0 !important;
+            }
         }
 
         #page-navbar {
-            li a,
-            li {
-                color: $foreground-secondary !important;
-                font-size: $text-s !important;
+            ul.breadcrumb {
+                padding: 0 !important;
+                margin: $margin-s 0 0 0 !important;
+
+                li a,
+                li {
+                    color: $foreground-secondary !important;
+                    font-size: $text-s !important;
+                }
+
+                a:hover {
+                    color: $primary-hover !important;
+                    text-decoration: underline !important;
+                }
             }
         }
     }
@@ -134,17 +170,21 @@ div#page {
                 background: $background !important;
                 padding: 0 !important;
                 overflow-x: hidden !important;
-                flex: 1 0 100% !important;
+                flex: 1 0 100%;
                 width: auto !important;
+
+                div[role="main"] {
+                    margin-bottom: $margin-m !important;
+                }
             }
 
             &:has([data-region="blocks-column"]) #region-main {
-                flex: 0 0 calc(70% - calc($margin-m / 2)) !important;
+                flex: 0 0 calc(70% - calc($margin-m / 2));
                 width: auto !important;
             }
 
             section[data-region="blocks-column"] {
-                flex: 0 0 calc(30% - calc($margin-m / 2)) !important;
+                flex: 0 0 calc(30% - calc($margin-m / 2));
             }
 
             @media screen and (max-width: $adaptive-margin-min-width) {
@@ -158,6 +198,7 @@ div#page {
 }
 
 #page-footer {
+    background-color: rgba($background-secondary, 0.5) !important;
     margin-bottom: calc($margin-m * -1) !important;
 
     .logininfo {

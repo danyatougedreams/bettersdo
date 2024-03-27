@@ -25,9 +25,12 @@ a#back-to-top {
     bottom: $margin-l !important;
     width: 48px !important;
     height: 48px !important;
+    align-content: center !important;
+    padding: 0 !important;
 
     i {
-        top: 0.1rem !important;
+        font-size: $text-xxl !important;
+        top: -0.025rem !important;
         position: relative;
     }
 
@@ -107,14 +110,12 @@ div#page-wrapper {
         button.nav-link,
         .coursecontrols a {
             margin: 0 !important;
-            align-content: center;
             width: 2rem;
             height: 2rem;
             padding: 0 !important;
-            border-radius: $corners !important;
             border: 1px solid $border !important;
             background-color: $background-secondary !important;
-            transition: none !important;
+            align-content: center;
 
             i {
                 color: $foreground-secondary;
@@ -379,12 +380,12 @@ div#page-wrapper {
             background-color: $background !important;
         }
 
-        li:not(:first-child) span.media-body {
-            // text-wrap: nowrap !important;
-            // text-overflow: ellipsis;
-            // display: block !important;
-            // overflow: hidden;
-        }
+        // li:not(:first-child) span.media-body {
+        //     text-wrap: nowrap !important;
+        //     text-overflow: ellipsis;
+        //     display: block !important;
+        //     overflow: hidden;
+        // }
 
         li:first-child a[data-key="coursehome"] {
             span.media-left {
@@ -407,7 +408,6 @@ div#page-wrapper {
             span.media-left {
                 color: $foreground-secondary !important;
                 margin-right: $margin-m !important;
-                // margin-top: $margin-xxs !important;
             }
 
             span {
@@ -424,6 +424,7 @@ div#page-wrapper {
                 }
             }
 
+            // when selected
             &.active {
                 span,
                 i {
@@ -431,7 +432,12 @@ div#page-wrapper {
                 }
             }
 
-            &:focus,
+            &:focus {
+                box-shadow: none !important;
+                -webkit-box-shadow: none !important;
+            }
+
+            &:focus-visible,
             &.active:hover {
                 box-shadow: none !important;
                 -webkit-box-shadow: none !important;
@@ -439,6 +445,17 @@ div#page-wrapper {
                 span,
                 i {
                     color: $primary-hover !important;
+                }
+            }
+
+            // when pressed
+            &:active,
+            &.active:active {
+                background-color: $primary-hover !important;
+
+                span,
+                i {
+                    color: $primary-foreground !important;
                 }
             }
         }
