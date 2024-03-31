@@ -1,4 +1,8 @@
 div#page #region-main {
+    aside {
+        margin-bottom: calc($margin-m * -1) !important;
+    }
+
     .fpwonderbox {
         margin-bottom: $margin-m !important;
         box-shadow: none !important;

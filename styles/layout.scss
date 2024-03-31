@@ -7,7 +7,7 @@ body {
     font-size: $text-m !important;
     font-weight: 400 !important;
     color: $foreground !important;
-    // line-height: 1.25 !important;
+    line-height: 1.25 !important;
     background-color: $background !important;
     padding: $margin-m $adaptive-margin-max $margin-m $adaptive-margin-max !important;
     margin: $navigation-height 0 0 0 !important;
@@ -107,11 +107,6 @@ div#page {
             color: $foreground !important;
         }
 
-        a:hover,
-        #page-navbar li a:hover {
-            color: $foreground !important;
-        }
-
         .page-context-header {
             padding: 0 !important;
             display: flex !important;
@@ -143,12 +138,13 @@ div#page {
                     color: $foreground-secondary !important;
                     font-size: $text-s !important;
                 }
-
-                a:hover {
-                    color: $primary-hover !important;
-                    text-decoration: underline !important;
-                }
             }
+        }
+
+        a:hover h1,
+        #page-navbar ul.breadcrumb li a:hover {
+            color: $primary-hover !important;
+            text-decoration: underline !important;
         }
     }
 
@@ -175,6 +171,12 @@ div#page {
 
                 div[role="main"] {
                     margin-bottom: $margin-m !important;
+                }
+
+                #page-wrapper:has(.activity-navigation) & div[role="main"] {
+                    margin-bottom: 0 !important;
+                    border-radius: $corners $corners 0 0 !important;
+                    border-bottom-width: 0 !important;
                 }
             }
 

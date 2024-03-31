@@ -3,10 +3,6 @@
         // to use a divider
         margin: calc($margin-m * -1) calc(($margin-m + $margin-xs) * -1) !important;
 
-        p:empty {
-            display: none !important;
-        }
-
         > li:not(:first-child) {
             border: 1px solid $border !important;
             border-width: 1px 0px 0px 0px !important;
@@ -82,7 +78,7 @@
 
                         .contentafterlink,
                         .contentwithoutlink.dimmed {
-                            margin: 0 0 0 $file-icon-bg + $margin-s + $margin-xs !important;
+                            margin: 0 0 0 $file-icon + $margin-s + $margin-xs !important;
                         }
 
                         &:has(.activityinstance) {
@@ -116,15 +112,15 @@
 
                                 img {
                                     margin-right: $margin-s + $margin-xs !important;
-                                    width: $file-icon-bg !important;
-                                    height: $file-icon-bg !important;
+                                    width: $file-icon !important;
+                                    height: $file-icon !important;
                                 }
                             }
                         }
 
                         &:has(.activityinstance) .activity-information,
                         &:has(.activityinstance) .availabilityinfo {
-                            margin: 0 0 0 $file-icon-bg + $margin-s + $margin-xs !important;
+                            margin: 0 0 0 $file-icon + $margin-s + $margin-xs !important;
 
                             * {
                                 margin-top: 0 !important;

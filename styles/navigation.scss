@@ -307,13 +307,13 @@ div#page-wrapper {
 
     > div#nav-drawer {
         background-color: $background !important;
-        padding: 0 !important;
-        margin: $margin-m + $navigation-height 0 $margin-m $adaptive-margin-max - $margin-s !important;
+        padding: $margin-m 0 $margin-m 0 !important;
+        margin: $navigation-height 0 0 $adaptive-margin-max - $margin-s !important;
         display: flex !important;
         gap: $margin-m;
         flex-direction: column;
         border-radius: $corners;
-        max-height: calc(100% - $navigation-height - $margin-m * 2) !important;
+        max-height: calc(100% - $navigation-height) !important;
         height: auto !important;
         top: 0 !important;
         width: $drawer-width !important;

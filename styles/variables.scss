@@ -14,6 +14,7 @@ $primary: #2563eb;
 $primary-hover: #1d4ed8;
 $destructive: #dc2626;
 $success: #5cb85c;
+$warning: #ffbb33;
 $success-hover: #408a40;
 $footer-background: #1d1c21;
 
@@ -64,6 +65,45 @@ $adaptive-margin-s-width: 1250px;
 $adaptive-margin-min-width: 950px;
 
 $header-pic: 3.5rem;
-$file-icon-bg: 1.5rem;
+$file-icon: 1.5rem;
 
 // h2: font-weight 700; font-size: 1.875rem; line-height: 2.25rem; margin-top: 1.5rem;
+
+// src: https://codepen.io/destro014/pen/dyyKqBd?editors=1100
+// TODO: implement it in this project
+
+// //defining scss variable
+// //light theme
+// $colors: (
+//     base: #ffffff,
+//     text: #000000,
+//     base2: #eeeeee,
+//     text2: #111111
+// );
+// //dark theme
+// $colors-dark: (
+//     base: #000000,
+//     text: #ffffff,
+//     base2: #111111,
+//     text2: #eeeeee
+// );
+// //converting scss variable into css variable
+// :root {
+//     @each $name, $color in $colors {
+//         --color-#{$name}: #{$color};
+//     }
+//     --theme: "light";
+// }
+
+// @media (prefers-color-scheme: dark) {
+//     :root {
+//         @each $name, $color in $colors-dark {
+//             --color-#{$name}: #{$color};
+//         }
+//         --theme: "dark";
+//     }
+// }
+// //creating a function to get color instead of using css varible
+// @function getColor($color-name) {
+//     @return var(--color-#{$color-name});
+// }
