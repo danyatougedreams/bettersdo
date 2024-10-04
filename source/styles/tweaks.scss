@@ -1,0 +1,27 @@
+jdiv {
+    display: none !important;
+}
+
+#page-content {
+    .activity {
+        padding: 0 !important;
+
+        &:has(.isrestricted) {
+            opacity: 0.25 !important;
+        }
+    }
+
+    li.course-section.hidden {
+        display: none !important;
+    }
+
+    .course-section:has(.section_availability .isrestricted) {
+        display: none !important;
+    }
+}
+
+#page-wrapper {
+    .courseindex-item.restrictions {
+        display: none !important;
+    }
+}

@@ -1,0 +1,60 @@
+#page-wrapper {
+    nav.navbar {
+        background-color: $bg-block !important;
+        box-shadow: $shadow !important;
+        height: 60px !important;
+        border: 1px solid $border !important;
+        border-width: 0 0 1px 0 !important;
+
+        *,
+        i.icon,
+        a.dropdown-toggle {
+            color: $fg !important;
+        }
+
+        a {
+            transition: background-color 100ms ease-in-out !important;
+        }
+
+        a:focus,
+        a:hover {
+            background-color: $bg-block-hover !important;
+            box-shadow: none !important;
+        }
+
+        a.navbar-brand {
+            font-weight: 700 !important;
+            font-size: 1.1rem !important;
+            padding: 0 1rem !important;
+            margin: 0 !important;
+
+            img {
+                object-fit: cover !important;
+                object-position: 0;
+                width: 46px !important;
+                height: 52px !important;
+                margin-right: 1rem !important;
+            }
+
+            &::after {
+                content: "Дистанционное обучение РТУ МИРЭА" !important;
+            }
+
+            &:hover {
+                color: $primary-hover !important;
+                background-color: $bg-block !important;
+            }
+        }
+
+        .divider,
+        form {
+            display: none !important;
+        }
+    }
+}
+
+#courseindex {
+    .courseindex-link {
+        white-space: wrap !important;
+    }
+}

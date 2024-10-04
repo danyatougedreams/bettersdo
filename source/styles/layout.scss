@@ -1,0 +1,87 @@
+#page-wrapper {
+    background-color: $bg !important;
+
+    .alert-warning,
+    .main-inner {
+        border: 1px solid $border !important;
+        margin: 1rem 0 0 0 !important;
+        box-shadow: $shadow !important;
+    }
+
+    .main-inner,
+    .header-maxwidth,
+    .secondary-navigation .navigation .nav-tabs {
+        max-width: unset !important;
+    }
+
+    .alert-warning {
+        background-color: $bg-block !important;
+        font-weight: 600 !important;
+
+        &::before {
+            content: "● ";
+            color: $primary !important;
+        }
+
+        a {
+            color: $primary !important;
+
+            &:hover {
+                color: $primary-hover !important;
+            }
+        }
+    }
+
+    .main-inner {
+        padding: 0.75rem 0.5rem !important;
+    }
+
+    .drawer {
+        background-color: $bg-block !important;
+        border: 1px solid $border !important;
+        margin-top: 1rem !important;
+        box-shadow: $shadow !important;
+        height: calc(100% - 60px - 1rem) !important;
+
+        &.drawer-left {
+            border-radius: 0 $border-radius 0 0 !important;
+            border-width: 1px 1px 0 0 !important;
+        }
+
+        &.drawer-right {
+            border-radius: $border-radius 0 0 0 !important;
+            border-width: 1px 0 0 1px !important;
+        }
+
+        .drawerheader {
+            margin-bottom: 0 !important;
+            border: 1px solid $border !important;
+            border-width: 0 0 1px 0 !important;
+            box-shadow: none !important;
+        }
+
+        .drawercontent {
+            padding: 0 !important;
+            margin-top: 0 !important;
+            border-top: none !important;
+
+            section {
+                border: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+        }
+    }
+
+    .drawer-toggler button {
+        background-color: $primary !important;
+        color: $bg-block !important;
+    }
+}
+#page.drawers {
+    scrollbar-color: $fg-secondary transparent !important;
+}
+
+#page-wrapper .drawercontent {
+    scrollbar-color: $fg-secondary $bg-block !important;
+}

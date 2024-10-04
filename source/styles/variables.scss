@@ -1,0 +1,36 @@
+// variables. initial values was took from login.mirea.ru,
+// so it's pretty consistent.
+// TODO: dark theme
+
+$border: #d1d5db;
+$border-width: 1px;
+$border-radius: 0.375rem;
+
+$bg: #f3f4f6;
+$bg-hover: #eceded;
+$bg-block: #ffffff;
+$bg-block-hover: #f3f4f68f;
+$fg: #111827;
+$fg-secondary: #6b7280;
+
+$primary: #2563eb;
+$primary-hover: #1d4ed8;
+
+$shadow:
+    0 0 #0000,
+    0 0 #0000,
+    0 1px 2px 0 rgb(0 0 0 / 0.05);
+
+$btn-font-size: 0.875rem;
+$btn-padding: 0.5rem 1rem;
+
+$input-font-size: 1rem;
+$input-padding: 0.5rem 0.75rem;
+
+// $button-hover: #f9fafb;
+// $button-hover-secondary: #eaebec;
+// $primary-foreground: #ffffff;
+// $destructive: #dc2626;
+// $success: #5cb85c;
+// $warning: #ffbb33;
+// $success-hover: #408a40;

@@ -1,0 +1,24 @@
+{
+    "name": "Better SDO",
+    "description": "Каким должен был быть редизайн СДО. Made by https://danyatougedreams.ru",
+    "version": "1.0",
+    "manifest_version": 3,
+    "icons": {
+        "48": "logo_48.png",
+        "128": "logo_128.png"
+    },
+    "host_permissions": [
+        "*://online-edu.mirea.ru/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "http://online-edu.mirea.ru/*",
+                "https://online-edu.mirea.ru/*"
+            ],
+            "css": [
+                "bettersdo.css"
+            ]
+        }
+    ]
+}

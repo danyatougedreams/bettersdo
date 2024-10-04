@@ -1,0 +1,272 @@
+#page-header h2 {
+    margin-top: 0.5rem !important;
+}
+
+#page-content {
+    padding: 0 !important;
+
+    hr {
+        display: none !important;
+    }
+
+    .block-myoverview {
+        .row.no-gutters {
+            gap: 0.5rem !important;
+        }
+    }
+
+    .list-group:has(.course-listitem) {
+        gap: 1rem !important;
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+
+    .course-listitem {
+        border: none !important;
+        padding: 0 !important;
+
+        *:has(.coursename) {
+            padding-left: 0 !important;
+        }
+
+        .coursename {
+            font-size: 1.05rem !important;
+            font-weight: 600 !important;
+            color: $fg !important;
+        }
+
+        .categoryname {
+            font-size: 0.9rem !important;
+            color: $fg-secondary !important;
+        }
+    }
+
+    .login-container {
+        background-color: $bg !important;
+        box-shadow: none !important;
+
+        .btn {
+            width: 100% !important;
+            background-color: $primary !important;
+            font-size: $btn-font-size !important;
+            padding: $btn-padding !important;
+            color: $bg-block !important;
+            font-weight: 600 !important;
+            border: 1px solid $primary !important;
+
+            &:hover {
+                background-color: $primary-hover !important;
+            }
+
+            &.btn-secondary:not(.login-identityprovider-btn) {
+                background-color: $bg-block !important;
+                color: $fg !important;
+                border: 1px solid $border !important;
+
+                &:hover {
+                    background-color: $bg-block-hover !important;
+                }
+            }
+        }
+
+        .loginform {
+            #loginlogo {
+                margin-bottom: 2rem !important;
+            }
+
+            .login-heading {
+                font-size: 1.2rem !important;
+                text-align: center !important;
+            }
+
+            .login-divider {
+                border: none !important;
+                margin: 1rem 0 0 0 !important;
+            }
+
+            .login-identityproviders {
+                margin-bottom: 3rem !important;
+            }
+
+            #theme_boost_union-loginorder-guest .login-heading {
+                font-size: 1rem !important;
+            }
+        }
+    }
+
+    .course-section {
+        border: none !important;
+
+        .sectionname {
+            font-size: 1.2rem !important;
+        }
+    }
+
+    .activity {
+        padding: 0 !important;
+        border-radius: $border-radius !important;
+
+        &:nth-child(odd) {
+            background-color: $bg-block-hover !important;
+        }
+
+        .activity-item {
+            border: none !important;
+            padding: 0.75rem !important;
+
+            .activity-basis:has(.automatic-completion-conditions) > * {
+                flex-direction: column !important;
+
+                .activity-info {
+                    margin-left: calc(35px + 1rem) !important;
+                    padding: 0 !important;
+                }
+
+                .automatic-completion-conditions {
+                    flex-direction: row !important;
+                    flex-wrap: wrap !important;
+                }
+            }
+        }
+
+        .activityname {
+            font-weight: 500 !important;
+            font-size: 1rem !important;
+            a {
+                color: $fg !important;
+            }
+        }
+
+        .courseicon {
+            width: 35px !important;
+            height: 35px !important;
+        }
+
+        .description {
+            margin-left: calc(35px + 1rem) !important;
+
+            > * {
+                background-color: transparent !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+            * {
+                font-size: 0.85rem !important;
+            }
+        }
+    }
+}
+
+#footnote p {
+    font-size: 0.9rem;
+    font-weight: 500 !important;
+
+    a:nth-child(2) {
+        margin-right: 2rem !important;
+    }
+
+    i {
+        margin-right: 0.25rem !important;
+    }
+
+    br {
+        display: none !important;
+    }
+}
+
+.pagelayout-login #page {
+    background-image: none !important;
+    background-color: $bg !important;
+}
+
+.drawercontent {
+    * {
+        // color: $fg !important;
+    }
+
+    .courseindex-item {
+        padding-top: 0.25rem !important;
+        padding-bottom: 0.25rem !important;
+
+        &.pageitem {
+            background-color: $bg-block !important;
+            a.courseindex-link {
+                color: $primary !important;
+            }
+        }
+
+        a.courseindex-link {
+            font-size: 0.85rem !important;
+            font-weight: 400 !important;
+            color: $fg-secondary !important;
+
+            &:hover {
+                text-decoration: underline !important;
+            }
+        }
+
+        &.courseindex-section-title a.courseindex-link {
+            color: $fg !important;
+        }
+    }
+
+    .courseindex-section-title a.courseindex-link {
+        font-size: 1rem !important;
+        font-weight: 600 !important;
+    }
+
+    .block_calendar_upcoming {
+        .event {
+            border: none !important;
+            padding-bottom: 0.5rem !important;
+
+            h6 a {
+                color: $fg !important;
+                white-space: unset !important;
+            }
+
+            .date {
+                color: $fg-secondary !important;
+                font-size: 0.85rem !important;
+            }
+        }
+    }
+
+    .block_news_items {
+        ul {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 1rem !important;
+            margin-bottom: 1rem !important;
+        }
+
+        .post {
+            display: flex !important;
+            flex-direction: column-reverse !important;
+
+            .info a {
+                color: $fg !important;
+                font-size: 1rem !important;
+            }
+
+            .head {
+                display: flex !important;
+                flex-direction: column-reverse !important;
+                font-size: 0.85rem;
+                color: $fg-secondary !important;
+                margin-top: 0.25rem !important;
+
+                .name::after {
+                    content: "," !important;
+                }
+            }
+        }
+    }
+}
+
+.modal-content {
+    .modal-header {
+        background-color: $bg-block !important;
+    }
+}

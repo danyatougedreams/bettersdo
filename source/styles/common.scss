@@ -1,0 +1,107 @@
+.aabtn.focus,
+.aabtn:focus,
+.btn-link.focus,
+.btn-link:focus,
+.nav-link.focus,
+.nav-link:focus,
+.editor_atto_toolbar button.focus,
+.editor_atto_toolbar button:focus,
+.editor_atto_toolbar .atto_toolbar_row.focus,
+.editor_atto_toolbar .atto_toolbar_row:focus,
+[role="button"].focus,
+[role="button"]:focus,
+.list-group-item-action.focus,
+.list-group-item-action:focus,
+input[type="checkbox"].focus,
+input[type="checkbox"]:focus,
+input[type="radio"].focus,
+input[type="radio"]:focus,
+input[type="file"].focus,
+input[type="file"]:focus,
+input[type="image"].focus,
+input[type="image"]:focus,
+.sr-only-focusable.focus,
+.sr-only-focusable:focus,
+a.dropdown-toggle.focus,
+a.dropdown-toggle:focus,
+.modal-dialog[tabindex="0"].focus,
+.modal-dialog[tabindex="0"]:focus,
+.moodle-dialogue-base .closebutton.focus,
+.moodle-dialogue-base .closebutton:focus,
+button.close.focus,
+button.close:focus,
+.form-autocomplete-selection.focus,
+.form-autocomplete-selection:focus,
+[role="treeitem"]:not([aria-expanded="true"]).focus,
+[role="treeitem"]:not([aria-expanded="true"]):focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.05rem #2564eb6e !important;
+}
+
+#page-header h1.h2 {
+    font-size: 1.4rem !important;
+}
+
+a:not(.btn-icon, .courseindex-chevron, .dropdown-item) {
+    color: $primary !important;
+    font-weight: 500 !important;
+
+    &:hover {
+        color: $primary-hover !important;
+    }
+}
+
+a.dropdown-item:hover {
+    background-color: $bg-hover !important;
+    color: $fg !important;
+}
+
+#back-to-top {
+    background-color: $primary !important;
+    color: $bg-block !important;
+
+    i {
+        padding-top: 0.4rem !important;
+    }
+}
+
+#page-wrapper a.nav-link {
+    font-weight: 500 !important;
+    font-size: 0.9rem !important;
+    color: $fg !important;
+
+    &.active {
+        color: $primary !important;
+        border-bottom-color: $primary;
+    }
+}
+
+li.breadcrumb-item {
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+}
+
+.btn-success {
+    border-radius: $border-radius !important;
+}
+
+.btn-outline-secondary,
+input.form-control {
+    background-color: $bg !important;
+    border: 1px solid $border !important;
+    color: $fg !important;
+    border-radius: $border-radius !important;
+    font-size: $btn-font-size !important;
+    transition:
+        background-color 100ms ease-in-out,
+        border-color 100ms ease-in-out !important;
+
+    &:hover {
+        background-color: $bg-hover !important;
+    }
+
+    &:focus {
+        box-shadow: none !important;
+        border-color: $primary !important;
+    }
+}
